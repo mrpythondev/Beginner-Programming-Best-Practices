@@ -10,7 +10,7 @@ should be.
 Knowing this will help you test and debug your code.
 
 3) DOCUMENT ASSUMPTIONS: In that doc string, write your assumptions about the code down.
-What was your thinking process and what assumptions were I making 
+What was your thinking process and what assumptions were you making 
 when building this code in this particular way.
 
 4) UNIT TESTING: testing each function seperately, validate each piece of
