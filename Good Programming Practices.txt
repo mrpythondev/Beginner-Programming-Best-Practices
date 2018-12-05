@@ -4,25 +4,22 @@
 these pieces of code should be easily tested.
 
 2) DOCUMENT THE CONSTRAINTS: In those modules, there should be a doc string containing exactly what
-the function does, what the expected inputs are and what the output/s
-should be. 
+the function does, what the expected inputs are and what the output/s should be. 
 
 Knowing this will help you test and debug your code.
 
 3) DOCUMENT ASSUMPTIONS: In that doc string, write your assumptions about the code down.
-What was your thinking process and what assumptions were you making 
-when building this code in this particular way.
+What was your thinking process and what assumptions were you making when building this code in this particular way.
 
-4) UNIT TESTING: testing each function seperately, validate each piece of
-code. 
+4) UNIT TESTING: testing each function seperately, validate each piece of code. 
 
     -use intuition about natural boundaries in the code
     -use black box testing:
-        Look at the parameters written in the doc string
+        -Look at the parameters written in the doc string
         -explore paths through specification (parameters written in doc string)
 
     -use glass box testing:
-        Look at the code itself to guide the design of test cases
+        -Look at the code itself to guide the design of test cases
         -explore paths through code
         Guidelines: 
             -branches
@@ -54,11 +51,4 @@ Does the overall program work?
             on the copy. That way if something goes wrong, you have an older
             version of the code. This is called version control. 
 
-
-
-
-
-                        Assertions and Exceptions
-
-1) exceptions are for encountering an error we didn't plan for
  
