@@ -1,0 +1,100 @@
+                        Assertions and Exceptions
+
+Types of common Exceptions:
+    1) SyntaxError: Python can't parse the program
+    2) NameError: local or global variable name not found
+    3) AttributeError: attribute reference fails (Classes/instance attributes failing)
+    4) TypeError: operand doesn't have correct type
+    5) ValueError: operand type okay, but value is illegal
+    6) IOError: Input/Output (IO) system reports malfunction (e.g. file not found)
+ 
+ Handling Exceptions:
+    Using keywords (Try and Except)
+Example: 
+
+while True:
+    try:
+        x = int(input("Please enter a number: "))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
+
+Keyword Try: The keyword trys the code at the next indentation and if everything works perfectly then skip the except statement that follows.
+If there is an error, the except state will run its own code.
+
+If x can't be converted/coerced into an integer (say the userInput was a boolean (True) or the letter 'a'), a ValueError will arise. 
+
+Keyword Except: The except keyword can be followed by any of the types of exceptions e.g. except NameError: (followed by code) or except ZeroDivisionError: (followed by code), 
+or just with an all encompassing net of any exception with just keyword except alone. e.g. except: <- by itself.
+
+Other Keywords that help are Else and Finally
+
+Else: runs after Try completes its code with NO EXCEPTIONS (will not run if there is an exception); 
+Finally: always runs even if there is an exception or no exception or return or break or continue. (Good for closing a file)
+
+Useful for getting a correct user input:
+
+while True:
+    try:
+        user_input = input("Please enter a number: ")
+        user_input = int(user_input)
+        break
+    except ValueError:
+        print("Input is not an integer; try again")
+print("Correct input of an integer!")
+
+Useful for getting a correct file:
+
+data = []
+file_name = input("Provide a name of a file with data")
+
+try:
+    fh= open(file_name, 'r')
+except IOError:
+    print("can't open", file_name)
+else:
+    for new in fh:
+        if new != '\n':
+            addIt = new[:-1].split(',') #removes trailing \n 
+            data.append(addIt)
+finally:
+    fh.close() #always closes the file
+
+#extending this example and assuming everyone has two names student[0] is first name and student[1] is last name
+
+grades_data = []
+
+if data:
+    for student in data:
+        try:
+            grade_data.append([student[:2], student[2]]) #student[:2] is getting First and Last name, and student[2] is getting grade
+        except IndexError:
+            grade_data.append([student[:2], []]) # if we get an IndexError because there is no grade for that student, ^do the above except without the grade (but an empty list)
+
+#better way of implementing this code
+
+data = []
+file_name = input("Provide a name of a file with data")
+
+try:
+    fh= open(file_name, 'r')
+except IOError:
+    print("can't open", file_name)
+else:
+    for new in fh:
+        if new != '\n':
+            addIt = new[:-1].split(',') #removes trailing \n 
+            data.append(addIt)
+finally:
+    fh.close() #always closes the file
+
+grades_data = []
+
+if data:
+    for student in data:
+        try:
+            name = student[0:-1]
+            grade = int(student[-1])
+            grade_data.append([[name], [grade]]) 
+        except ValueError:
+            grade_data.append([student[:], []])
