@@ -44,3 +44,12 @@ Catch reintroduced errors that were previously fixed.
 
 6) INTEGRATION TESTING: put each part together and does that part work?
 Does the overall program work? 
+
+                     ***BEST WAY TO RIGHT A PIECE OF CODE***
+
+            =Write a function, then test the function using methods above,
+            then debug that function. 
+
+            Once you find a bug save a copy of the current code, and work
+            on the copy. That way if something goes wrong, you have an older
+            version of the code. This is called version control. 
