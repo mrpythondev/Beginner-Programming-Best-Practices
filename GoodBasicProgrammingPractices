@@ -2,7 +2,7 @@
 
 What does good code look like?
 
-Good Code:
+Good Doc String Code:
 
 def add_number(number1, number2):
   """
