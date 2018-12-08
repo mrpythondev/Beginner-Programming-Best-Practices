@@ -2,15 +2,15 @@
 
 What does good code look like?
 
-Good Doc String Code:
+Good Docstring Code:
 
 def add_number(number1, number2):
   """
-  Writing a doc string and things to consider. When making a doc string you should put it at the beginning of your function 
-  and code. The reason you are writing the doc string is tell any one who is reading the doc string, your expected inputs
-  and expected outputs which we call the constraints. 
+  WRITING A DOCSTRING AND THINGS TO CONSIDER. When making a docstring you should put it at the beginning of your function 
+  and code. The reason you are writing the docstring is tell anyone who is reading the docstring your expected inputs
+  and expected outputs which we call the constraints. Also tell them what your function does.
   
-  Key Constraints:
+  Key Things to have in a Docstring:
   1) Inputs <- Are you expecting a string or an int or a list. Make sure it is clear
   2) Output/s <- What are your expected output/s? 
   3) What your function/code does. <- Write out what your function does but a simplistic version. Max 3 sentences. 
@@ -26,16 +26,34 @@ def add_number(number1, number2):
   
   return number1 + number2 # <- This is the output and you elaborate what you have here. 
                            # If I had more code before the return I could comment on that as well if the code is hard to understand.  
-  
+
+WHY WRITE A CLEAR AND CONCISE DOCSTRING: Not only will this help others read and understand your code but it helps you
+be able to know where to start your unit testing and debugging processes (will go into more details below). 
+
+
 Bad Code:
 
+def add_number(number1, number2):
+    
+    return number1 + number2
+
+# If this code was more complex or complicated, with no comments or docstring would take more time for person reading to figure out
+# what your code was doing.
 
 
 The Process of Writing Good Code:
 
-
 1) Break code up into modules that contain smaller pieces of code; 
 these pieces of code should be easily tested.
+
+# Taking a project and turning it into little working parts/functions, that once those parts are made and work, 
+# can combine together to form the working project. 
+
+Example: AdditionProject ---> Working Parts       ---> Combine those back together in one file/module to making a working project.
+                            1) Function/Class that adds
+                            2) Function/Class that ...
+                            3) Function/Class that ...
+                            4) Etc.
 
 2) DOCUMENT THE CONSTRAINTS: In those modules, there should be a doc string containing exactly what
 the function does, what the expected inputs are and what the output/s
