@@ -19,13 +19,17 @@ code.
     -use intuition about natural boundaries in the code
     -use black box testing:
         Look at the parameters written in the doc string
-        -explore paths through specification (parameters written in doc string)
-
+        -explore paths through specification 
+        -what this means is use the function's documented input CONSTRAINTS (parameters written in doc string)
+        to make sure the function works at those points   
+    
     -use glass box testing:
         Look at the code itself to guide the design of test cases
         -explore paths through code
+        Try to go through each fork/branches (if, elif, else statements), for loops, and while loops 
+        to make sure the function works at those points
         Guidelines: 
-            -branches
+            -fork/branches (if, elif, else statements)
             -for loops
             -while loops
     
