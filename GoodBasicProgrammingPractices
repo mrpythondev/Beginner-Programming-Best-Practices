@@ -1,5 +1,39 @@
                     GOOD PROGRAMMING PRACTICES 
 
+What does good code look like?
+
+Good Code:
+
+def add_number(number1, number2):
+  """
+  Writing a doc string and things to consider. When making a doc string you should put it at the beginning of your function 
+  and code. The reason you are writing the doc string is tell any one who is reading the doc string, your expected inputs
+  and expected outputs which we call the constraints. 
+  
+  Key Constraints:
+  1) Inputs <- Are you expecting a string or an int or a list. Make sure it is clear
+  2) Output/s <- What are your expected output/s? 
+  3) What your function/code does. <- Write out what your function does but a simplistic version. Max 3 sentences. 
+  
+  For this example my docstring should look like this:
+  
+  '''
+  Inputs: Takes two seperate integers or floats for the arguments (telling you what the number1 and number2 are). 
+  Outputs: The return value will be a single integer that is the combination of the two inputs.
+  Functionality: The function will add two numbers together and output a single number back. 
+  '''
+  """
+  
+  return number1 + number2 # <- This is the output and you elaborate what you have here. 
+                           # If I had more code before the return I could comment on that as well if the code is hard to understand.  
+  
+Bad Code:
+
+
+
+The Process of Writing Good Code:
+
+
 1) Break code up into modules that contain smaller pieces of code; 
 these pieces of code should be easily tested.
 
