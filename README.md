@@ -4,6 +4,6 @@ This repository will consist of best beginner programming practices and examples
 also how to do unit testing and methods/strategies of debugging. 
 
 Where to start and what documents to read first:
-1. GoodBasicProgrammingPractices.txt
+1. GoodBasicProgrammingPractices
 2. Assertions&Exceptions
 3. Coming soon -> Python Tutorials on YouTube
